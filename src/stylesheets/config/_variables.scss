@@ -1,7 +1,10 @@
 $gutter: 10px;
+$gutter25: .25*$gutter;
+$gutter50: .5*$gutter;
 $gutter100: $gutter;
 $gutter150: 1.5*$gutter;
 $gutter200: 2*$gutter;
+$gutter250: 2.5*$gutter;
 $gutter300: 3*$gutter;
 $gutter400: 4*$gutter;
 $gutter500: 5*$gutter;
@@ -9,8 +12,21 @@ $gutter600: 6*$gutter;
 $gutter700: 7*$gutter;
 $gutter800: 8*$gutter;
 $gutter900: 9*$gutter;
-$gutter50: .5*$gutter;
-$gutter25: .25*$gutter;
+
+$lh: 20px;
+$lh25: 	$lh*.25;
+$lh50: 	$lh*.5;
+$lh75:	$lh*.75;
+$lh100: $lh;
+$lh150: $lh*1.5;
+$lh200: $lh*200;
+$lh300: $lh*300;
+$lh400: $lh*400;
+$lh500: $lh*500;
+$lh600: $lh*600;
+$lh700: $lh*700;
+$lh800: $lh*800;
+$lh900: $lh*900;
 
 $w4: 300px + 2*($gutter);	//	320
 $w8: 2*($w4);				//	620

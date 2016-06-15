@@ -10,15 +10,15 @@
 import React from 'react';
 
 const MostPopular = (props) => {
-  var sectionClassName = 'section ' + props.sectionClassName; 
+  var sectionClassName = props.sectionClassName ? 'section ' + props.sectionClassName : 'section'; 
   return (
       <div className={sectionClassName}>
         <div className="container">
           <h2 className="section__title">Most Popular</h2>
           <div className="section__content row">
-            <div className="column"></div>
-            <div className="column"></div>
-            <div className="column"></div>
+            <div className="column w16-c4">
+              <div className="newsItem"></div>
+            </div>
           </div>
         </div>
       </div>

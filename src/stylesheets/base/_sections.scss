@@ -1,5 +1,11 @@
+.section {
+	padding-top: $gutter300; 
+}
 .section__title {
 	@include smallCaps();
+	padding-bottom: $gutter200;
+	margin-bottom: $gutter250;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 300;
+	border-bottom: $border1; 
 }

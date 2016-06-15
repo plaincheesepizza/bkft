@@ -10,7 +10,7 @@
 import React from 'react';
 
 const Penta = (props) => {
-  var sectionClassName = 'section ' + props.sectionClassName; 
+  var sectionClassName = props.sectionClassName ? 'section ' + props.sectionClassName : 'section'; 
   return (
       <div className={sectionClassName}>
         <div className="container">

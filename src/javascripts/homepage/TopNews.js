@@ -8,8 +8,12 @@
  */
 
 import React from 'react';
+import Utility from 'javascripts/utility';
+
 
 const TopNews = (props) => {
+
+  var u = Utility;
   var topStories = [
     {
       type: 'feature',
@@ -140,118 +144,71 @@ const TopNews = (props) => {
       imglink: undefined
     }
   ]
-  var sectionClassName = 'section ' + props.sectionClassName; 
-
-  function formatStory(item, type) {
-      item.classname = 'element newsItem is-' + item.type;
-      switch(type) {
-        case 'featured' :
-          return (
-            <div className={item.classname}>
-              <div className="newsItem__img"></div>
-              <div className="newsItem__column">{item.column}</div>
-              <div className="newsItem__title">{item.title}</div>
-              <div className="newsItem__author">By {item.author}</div>
-              <div className="newsItem__preview">{item.preview}</div>
-            </div>
-          );
-        case 'sponsored':
-          return (
-            <div className={item.classname}>
-              <div className="newsItem__column">{item.column}</div>
-              <div className="newsItem__title">{item.title}</div>
-              <div className="newsItem__img"></div>
-              <div className="newsItem__preview">{item.preview}</div>
-            </div>
-          );
-          break;
-        case 'thumb':
-        default:
-          return (
-            <div className={item.classname}>
-              <div className="newsItem__column">{item.column}</div>
-              <div className="newsItem__title">{item.title}</div>
-              <div className="newsItem__author">By {item.author}</div>
-              <div className="newsItem__img"></div>
-              <div className="newsItem__preview">{item.preview}</div>
-            </div>
-          );
-      }
-
-  }
-  function formatBlog(item) {
-      item.classname = 'element blogItem is-' + item.type;
-      return (
-        <div className={item.classname}>
-          <div className="blogItem__column">{item.column}</div>
-          <div className="blogItem__author">By {item.author}</div>
-          <div className="blogItem__title">{item.title}</div>
-          <div className="blogItem__timestamp">{item.timestamp}</div>
-        </div>
-      );
-  }
+  var sectionClassName = props.sectionClassName ? 'section ' + props.sectionClassName : 'section'; 
 
   return (
       <div className={sectionClassName}>
         <div className="container">
 
-          <div className="row section__content">
-            <div className="column w8-c5 w12-c5 w16-c8">
-                <div className="feed">
-                    <div className="row">
-                        <div className="column">{formatStory(topStories[0], 'featured')}</div>
-                    </div>
-                    <div className="row">
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[1], 'thumb')}</div>
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[2])}</div>
-                    </div>
-                    <div className="row">
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[3])}</div>
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[4])}</div>
-                    </div>
-                    <div className="row">
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[5])}</div>
-                        <div className="column w5-c5 w8-c4">{formatStory(topStories[6], 'sponsored')}</div>
-                    </div>
-                </div>
-            </div>
+          <div className="section__content">
+            <div className="row">
 
-            <div className="column w8-c3 w12-c3 w16-c4">
-                <div className="feed u-clear">
-                    <div className="row">
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[0])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[1])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[2])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[3])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[4])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[5])}</div>
-                        <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{formatBlog(latest[6])}</div>
-                    </div>
-                </div>
-            </div>
+              <div className="column w8-c5 w12-c5 w16-c8">
+                  <div className="feed">
+                      <div className="row">
+                          <div className="column">{u.formatStory(topStories[0], 'featured')}</div>
+                      </div>
+                      <div className="row">
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[1], 'thumb')}</div>
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[2])}</div>
+                      </div>
+                      <div className="row">
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[3])}</div>
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[4])}</div>
+                      </div>
+                      <div className="row">
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[5])}</div>
+                          <div className="column w5-c5 w8-c4">{u.formatStory(topStories[6], 'sponsored')}</div>
+                      </div>
+                  </div>
+              </div>
 
-            <div className="column w12-c4 w16-c4 u-floatRight">
-                <div className="row">
-                    <div className="column w4-c4 w8-c4">
-                        <div className="element element--default marketData">
-                            <h4 className="element__title"><label className="label">Market Data</label></h4>
-                            <div className="element__body"></div>
-                        </div>
-                    </div>
-                    <div className="column w4-c4 w8-c4">
-                        <div className="element element--default element--ad">
-                            <div className="ad__title">Advertisement</div>
-                            <div className="ad__body both">
-                                <div className="ad__body">
-                                    <label className="label">300x250</label>
-                                </div>
-                                <label className="label">300x600</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div className="column w8-c3 w12-c3 w16-c4">
+                  <div className="feed u-clear">
+                      <div className="row">
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[0], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[1], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[2], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[3], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[4], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[5], 'noimg')}</div>
+                          <div className="column w3-c3 w4-c4 w8-c4 w12-c4">{u.formatStory(latest[6], 'noimg')}</div>
+                      </div>
+                  </div>
+              </div>
 
+              <div className="column w12-c4 w16-c4 u-floatRight">
+                  <div className="row">
+                      <div className="column w4-c4 w8-c4">
+                          <div className="element element--default marketData">
+                              <h4 className="element__title"><label className="label">Market Data</label></h4>
+                              <div className="element__body"></div>
+                          </div>
+                      </div>
+                      <div className="column w4-c4 w8-c4">
+                          <div className="element element--default element--ad">
+                              <div className="ad__title">Advertisement</div>
+                              <div className="ad__body both">
+                                  <div className="ad__body">
+                                      <label className="label">300x250</label>
+                                  </div>
+                                  <label className="label">300x600</label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

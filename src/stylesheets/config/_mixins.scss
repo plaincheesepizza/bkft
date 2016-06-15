@@ -28,14 +28,14 @@
 	@include smallCaps();
 	font-size: 12px;
 	font-weight: 500; 
-	line-height: 15px;
+	line-height: $lh75;
 	color: $color-grey2;
 	@if $sponsored == 'sponsored' {
 		color: $color-highlight; 
 	}
 }
 @mixin fontHeadline($type) {
-	margin-bottom: 4px; 
+	margin-bottom: $lh25; 
 	font-family: $fontFamily-serif; 
 	font-size: 26px;
 	font-weight: 300;
@@ -52,13 +52,11 @@
 @mixin fontAuthor() {
 	font-style: italic; 
 	font-size: 12px;
+	line-height: $lh75;
 }
 @mixin fontTimestamp() {
 	font-size: 11px;
+	line-height: $lh75;
 	color: $color-textHighlight;
 }
 
-@mixin fontBlogHeadline() {
-	color: $color-textDark;
-	font-weight: 500;
-}
