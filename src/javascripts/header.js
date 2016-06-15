@@ -7,7 +7,8 @@ const Header = React.createClass({
   render () {
     return (
       <div className='header u-clearfix'>
-        Header
+        <div className="header__edition"></div>
+        <div className="header__main"></div>
       </div>
     )
   }

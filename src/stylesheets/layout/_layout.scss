@@ -1,0 +1,354 @@
+@mixin columnGenerate($layoutColumnsTotal) {
+	@for $i from 1 through $layoutColumnsTotal {
+		$pct: percentage(($i)/($layoutColumnsTotal));
+		$count: $i;
+		.w#{$layoutColumnsTotal}-c#{$i} { 
+			width: $pct; 
+		}
+	}
+}
+
+
+.content {
+}
+.container { 
+	width: 100%; 
+	padding-left: $gutter100;
+	padding-right: $gutter100; 
+	margin-left: auto;
+	margin-right: auto; 
+}
+.row {
+	@include clearfix();
+	margin-left: $gutter100/-1;
+	margin-right: $gutter100/-1;
+}
+.column {
+	float: left; 
+	padding-left: $gutter100;
+	padding-right: $gutter100; 
+	min-height: 1px; 
+	width: 100%;
+}
+.element {
+	margin-bottom: $gutter200; 
+}
+.c1 	{ width: 25%; }
+.c2 	{ width: 50%; }
+.c3 	{ width: 75%; }
+.c4 	{ width: 100%; }
+
+@media screen and (min-width: $w8) {
+	.container { width: $w8; }
+	.w8-c1 { width: 12.5%  }
+	.w8-c2 { 
+		width: 25%; 
+		.w2-c1 { width: 50%; }
+	}
+	.w8-c3 {
+		width: 37.5%;
+		.w3-c1 { width: 33.33333333%; }
+		.w3-c2 { width: 66.66666666%; }
+		.w3-c3 { width: 100%; }
+	}
+	.w8-c4 {
+		width: 50%; 
+		.w4-c1 { width: 25%; }
+		.w4-c2 { width: 50%; }
+		.w4-c3 { width: 75%; }
+	}
+	.w8-c5 {
+		width: 62.5%; 
+		.w5-c1 { width: 20%; }
+		.w5-c2 { width: 40%; }
+		.w5-c3 { width: 60%; }
+		.w5-c4 { width: 80%; }
+		.w5-c5 { width: 100%; }
+	}
+	.w8-c6 {
+		width: 75%; 
+		.w6-c1 { width: 16.66666666%; }
+		.w6-c2 { width: 33.33333333%; }
+		.w6-c3 { width: 50%; }
+		.w6-c4 { width: 66.66666666%; }
+		.w6-c5 { width: 83.33333333%; }
+	}
+	.w8-c7 {
+		width: 87.5%; 
+		.w7-c1 { width: 14.2857143%; }
+		.w7-c2 { width: 28.5714286; }
+		.w7-c3 { width: 42.8571429%; }
+		.w7-c4 { width: 57.1428571%; }
+		.w7-c5 { width: 71.4285714%; }
+		.w7-c6 { width: 85.7142857%; }
+	}
+	.w8-c8 {
+		width: 100%; 
+	}
+}
+@media screen and (min-width: $w12) {
+	.container { width: $w12; }
+	.w12-c1 { 
+		width: 8.3333333%
+	}
+	.w12-c2 { 
+		width: 16.66666666%;
+		.w2-c1 { width: 50%; }
+	}
+	.w12-c3 {
+		width: 25%;
+		.w3-c1 { width: 33.33333333%; }
+		.w3-c2 { width: 66.66666666%; }
+		.w3-c3 { width: 100%; }
+	}
+	.w12-c4 {
+		width: 33.33333333%; 
+		.w4-c1 { width: 25%; }
+		.w4-c2 { width: 50%; }
+		.w4-c3 { width: 75%; }
+		.w4-c4 { width: 100%; }
+	}
+	.w12-c5 {
+		width: 41.6666667%; 
+		.w5-c1 { width: 20%; }
+		.w5-c2 { width: 40%; }
+		.w5-c3 { width: 60%; }
+		.w5-c4 { width: 80%; }
+		.w5-c5 { width: 100%; }
+	}
+	.w12-c6 {
+		width: 50%; 
+		.w6-c1 { width: 16.66666666%; }
+		.w6-c2 { width: 33.33333333%; }
+		.w6-c3 { width: 50%; }
+		.w6-c4 { width: 66.66666666%; }
+		.w6-c5 { width: 83.33333333%; }
+		.w6-c6 { widht: 100%; }
+	}
+	.w12-c7 {
+		width: 58.3333333%; 
+		.w7-c1 { width: 14.2857143%; }
+		.w7-c2 { width: 28.5714286%; }
+		.w7-c3 { width: 42.8571429%; }
+		.w7-c4 { width: 57.1428571%; }
+		.w7-c5 { width: 71.4285714%; }
+		.w7-c6 { width: 85.7142857%; }
+		.w7-c7 { widht: 100%; }
+	}
+	.w12-c8 {
+		width: 66.66666666%;
+		.w8-c1 { width: 12.5%; }
+		.w8-c2 { width: 25%; }
+		.w8-c3 { width: 37.5%; }
+		.w8-c4 { width: 50%; }
+		.w8-c5 { width: 62.5%; }
+		.w8-c6 { width: 75%; }
+		.w8-c7 { width: 87.5%; }
+		.w8-c8 { widht: 100%; }
+	}
+	.w12-c9 {
+		width: 75%;
+		.w9-c1 { width: 11.11111111%; }
+		.w9-c2 { width: 22.22222222%; }
+		.w9-c3 { width: 33.33333333%; }
+		.w9-c4 { width: 44.44444444%; }
+		.w9-c5 { width: 55.55555555%; }
+		.w9-c6 { width: 66.66666666%; }
+		.w9-c7 { width: 77.77777777%; }
+		.w9-c8 { width: 88.88888888%; }
+		.w9-c9 { widht: 100%; }
+	}
+	.w12-c10 {
+		width: 83.3333333%; 
+		.w10-c1 { width: 10%; }
+		.w10-c2 { width: 20%; }
+		.w10-c3 { width: 30%; }
+		.w10-c4 { width: 40%; }
+		.w10-c5 { width: 50%; }
+		.w10-c6 { width: 60%; }
+		.w10-c7 { width: 70%; }
+		.w10-c8 { width: 80%; }
+		.w10-c9 { width: 90%; }
+		.w10-c10 { widht: 100%; }
+	}
+	.w12-c11 {
+		width: 91.6666667%; 
+		.w11-c1 { width: 09.0909091%; }
+		.w11-c2 { width: 18.1818182%; }
+		.w11-c3 { width: 27.2727273%; }
+		.w11-c4 { width: 36.3636364%; }
+		.w11-c5 { width: 45.4545455%; }
+		.w11-c6 { width: 54.5454545%; }
+		.w11-c7 { width: 6336363636%; }
+		.w11-c8 { width: 72.7272727%; }
+		.w11-c9 { width: 81.8181818%; }
+		.w11-c10 { width: 90.9090909%; }
+		.w11-c11 { widht: 100%; }
+	}
+	.w12-c12 {
+		width: 100%; 
+	}
+}
+@media screen and (min-width: $w16) {
+	.container { width: $w16; }
+	.w16-c1 { 
+		width: 6.25%
+	}
+	.w16-c2 { 
+		width: 12.5%;
+		.w2-c1 { width: 50%; }
+	}
+	.w16-c3 {
+		width: 18.75%;
+		.w3-c1 { width: 33.33333333%; }
+		.w3-c2 { width: 66.66666666%; }
+		.w3-c3 { width: 100%; }
+	}
+	.w16-c4 {
+		width: 25%; 
+		.w4-c1 { width: 25%; }
+		.w4-c2 { width: 50%; }
+		.w4-c3 { width: 75%; }
+		.w4-c4 { width: 100%; }
+	}
+	.w16-c5 {
+		width: 31.25%; 
+		.w5-c1 { width: 20%; }
+		.w5-c2 { width: 40%; }
+		.w5-c3 { width: 60%; }
+		.w5-c4 { width: 80%; }
+		.w5-c5 { width: 100%; }
+	}
+	.w16-c6 {
+		width: 37.5%; 
+		.w6-c1 { width: 16.66666666%; }
+		.w6-c2 { width: 33.33333333%; }
+		.w6-c3 { width: 50%; }
+		.w6-c4 { width: 66.66666666%; }
+		.w6-c5 { width: 83.33333333%; }
+	}
+	.w16-c7 {
+		width: 43.75%; 
+		.w7-c1 { width: 14.2857143%; }
+		.w7-c2 { width: 28.5714286%; }
+		.w7-c3 { width: 42.8571429%; }
+		.w7-c4 { width: 57.1428571%; }
+		.w7-c5 { width: 71.4285714%; }
+		.w7-c6 { width: 85.7142857%; }
+	}
+	.w16-c8 {
+		width: 50%;
+		.w8-c1 { width: 12.5%; }
+		.w8-c2 { width: 25%; }
+		.w8-c3 { width: 37.5%; }
+		.w8-c4 { width: 50%; }
+		.w8-c5 { width: 62.5%; }
+		.w8-c6 { width: 75%; }
+		.w8-c7 { width: 87.5%; }
+	}
+	.w16-c9 {
+		width: 56.25%;
+		.w9-c1 { width: 11.11111111%; }
+		.w9-c2 { width: 22.22222222%; }
+		.w9-c3 { width: 33.33333333%; }
+		.w9-c4 { width: 44.44444444%; }
+		.w9-c5 { width: 55.55555555%; }
+		.w9-c6 { width: 66.66666666%; }
+		.w9-c7 { width: 77.77777777%; }
+		.w9-c8 { width: 88.88888888%; }
+	}
+	.w16-c10 {
+		width: 62.5%; 
+		.w10-c1 { width: 10%; }
+		.w10-c2 { width: 20%; }
+		.w10-c3 { width: 30%; }
+		.w10-c4 { width: 40%; }
+		.w10-c5 { width: 50%; }
+		.w10-c6 { width: 60%; }
+		.w10-c7 { width: 70%; }
+		.w10-c8 { width: 80%; }
+		.w10-c9 { width: 90%; }
+	}
+	.w16-c11 {
+		width: 68.75%; 
+		.w11-c1 { width: 09.0909091%; }
+		.w11-c2 { width: 18.1818182%; }
+		.w11-c3 { width: 27.2727273%; }
+		.w11-c4 { width: 36.3636364%; }
+		.w11-c5 { width: 45.4545455%; }
+		.w11-c6 { width: 54.5454545%; }
+		.w11-c7 { width: 6336363636%; }
+		.w11-c8 { width: 72.7272727%; }
+		.w11-c9 { width: 81.8181818%; }
+		.w11-c10 { width: 90.9090909%; }
+	}
+	.w16-c12 {
+		width: 75%; 
+		.w12-c1 { width: 8.3333333%; }
+		.w12-c2 { width: 16.6666667%; }
+		.w12-c3 { width: 25%; }
+		.w12-c4 { width: 33.3333333%; }
+		.w12-c5 { width: 41.6666667%; }
+		.w12-c6 { width: 50%; }
+		.w12-c7 { width: 58.3333333%; }
+		.w12-c8 { width: 66.6666666%; }
+		.w12-c9 { width: 75%; }
+		.w12-c10 { width: 83.3333333%; }
+		.w12-c11 { width: 91.6666667%; }
+	}
+	.w16-c13 {
+		width: 81.25%; 
+		.w13-c1 { width: 7.6923077%; }
+		.w13-c2 { width: 15.3846154%; }
+		.w13-c3 { width: 23.0769231%; }
+		.w13-c4 { width: 30.7692308%; }
+		.w13-c5 { width: 38.4615385%; }
+		.w13-c6 { width: 46.1538462%; }
+		.w13-c7 { width: 53.8461538%; }
+		.w13-c8 { width: 61.5384615%; }
+		.w13-c9 { width: 69.2307692%; }
+		.w13-c10 { width: 76.9230769%; }
+		.w13-c11 { width: 84.6153846%; }
+		.w13-c12 { width: 92.3076923%; }
+	}
+	.w16-c14 {
+		width: 87.5%; 
+		.w14-c1 { width: 7.1428571%; }
+		.w14-c2 { width: 14.2857143%; }
+		.w14-c3 { width: 21.4285714%; }
+		.w14-c4 { width: 28.5714286%; }
+		.w14-c5 { width: 35.7142857%; }
+		.w14-c6 { width: 42.8571429%; }
+		.w14-c7 { width: 50%; }
+		.w14-c8 { width: 57.1428571%; }
+		.w14-c9 { width: 64.2857143%; }
+		.w14-c10 { width: 71.4285714%; }
+		.w14-c11 { width: 78.5714286%; }
+		.w14-c12 { width: 85.7142857%; }
+		.w14-c13 { width: 92.8571429%; }
+	}
+	.w16-c15 {
+		width: 93.75%; 
+		.w15-c1 { width: 6.6666667%; }
+		.w15-c2 { width: 13.3333333%; }
+		.w15-c3 { width: 20%; }
+		.w15-c4 { width: 26.6666667%; }
+		.w15-c5 { width: 33.3333333%; }
+		.w15-c6 { width: 40%; }
+		.w15-c7 { width: 46.6666667%; }
+		.w15-c8 { width: 53.3333333%; }
+		.w15-c9 { width: 60%; }
+		.w15-c10 { width: 66.6666666%; }
+		.w15-c11 { width: 73.3333333%; }
+		.w15-c12 { width: 80%; }
+		.w15-c13 { width: 86.6666667%; }
+		.w15-c14 { width: 93.3333333%; }
+	}
+	.w16-c16 {
+		width: 100%; 
+	}
+}
+@media screen and (min-width: $w20) {
+	// .container { width: 100%; }
+}
+

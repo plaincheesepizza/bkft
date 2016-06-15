@@ -1,4 +1,4 @@
-import 'stylesheets/base'
+import 'stylesheets/main'
 
 import React from 'react'
 import ReactDOM from 'react-dom'

@@ -5,7 +5,7 @@ const path = require('path')
 const sassLoaders = [
   'css-loader',
   'postcss-loader',
-  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './src')
+  'sass-loader?&includePaths[]=' + path.resolve(__dirname, './src')
 ]
 
 const config = {
@@ -20,7 +20,7 @@ const config = {
         loaders: ['babel-loader']
       },
       {
-        test: /\.sass$/,
+        test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
       }
     ]
@@ -39,7 +39,7 @@ const config = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.sass'],
+    extensions: ['', '.js', '.sass', '.scss'],
     root: [path.join(__dirname, './src')]
   }
 }

@@ -1,0 +1,92 @@
+$gutter: 10px;
+$gutter100: $gutter;
+$gutter150: 1.5*$gutter;
+$gutter200: 2*$gutter;
+$gutter300: 3*$gutter;
+$gutter400: 4*$gutter;
+$gutter500: 5*$gutter;
+$gutter600: 6*$gutter;
+$gutter700: 7*$gutter;
+$gutter800: 8*$gutter;
+$gutter900: 9*$gutter;
+$gutter50: .5*$gutter;
+$gutter25: .25*$gutter;
+
+$w4: 300px + 2*($gutter);	//	320
+$w8: 2*($w4);				//	620
+$w12: 3*($w4);				//	940
+$w16: 4*($w4);				//	1260 
+$w20: 5*($w4);
+
+$form-control: 40px;
+$radius: 2px; 
+
+$black10: fade-out(black, .9);
+
+$color-greyLight: #c6ccd1;
+$color-grey: #8e99a2;
+$color-grey2: #566674;
+$color-greyDark: #203140;
+
+$color-blue: 	#005499;
+$color-blue75:	#407fb3;
+$color-blue50:	#7fa9cc;
+$color-blue25:	#bfd4e5;
+
+$color-slate:	#203140;
+$color-slate75:	#566674;
+$color-slate50: #8e99a2;
+$color-slate25: #c6ccd1;
+
+$color-tan: 	#5a5a53;
+$color-tan75:	#a2a299;
+$color-tan50:	#e5e5dd;
+$color-tan25:	#f5f5f0;
+
+$color-sky:		#2fafcd;
+$color-sky75:	#64c4da;
+$color-sky50:	#97d7e6;
+$color-sky25:	#cbebf2;
+
+$color-gold:	#cb8900;
+$color-red: 	#d94b39;
+$color-green: 	#349439;
+
+
+
+$fontFamily-sans: 'Theinhardt', helvetica, sans-serif;  
+$fontFamily-serif: 'B3GoudyOldStyle', 'goudy', 'georgia', serif;
+
+$fontSize-small: 12px;
+$fontSize-base: 14px; 
+// $fontSize-large: 
+// $fontSize-larger:
+// $fontSize-largest:
+
+$lineHeight-base: 20px;
+
+$color-text: $color-slate75;
+$color-textBase: $color-slate75;
+$color-textDark: $color-slate;
+$color-textHighlight: $color-gold;
+
+$fontSize-micro:	     		.5rem;     // 8px;		0.512		//	8.192
+$fontSize-smallest:      	  .625rem;     // 10px;		0.64		//	10.24
+$fontSize-smaller:        	   .75rem;     // 12px;		0.8			//	12.8	
+$fontSize-small:			  .875rem;	   // 14px;		out of rhythm
+$fontSize-base:                  1rem;     // 16px;		1			// 	16
+$fontSize-large:              1.25rem;     // 20px;		1.25		//	20
+$fontSize-larger:      		   1.5rem;     // 24px;		1.563		//	25.008
+$fontSize-largest:     		 1.875rem;     // 30px;		1.953		//	31.248
+$fontSize-jumbo:       		   2.5rem;     // 40px;		2.441		//	39.056
+$fontSize-header:      			 3rem;     // 48px;		3.05125		//	48.82
+$fontSize-oversized:         3.875rem;     // 62px;		3.8140625	//	61.025
+
+$letterSpacing-loose: .05em;
+$letterSpacing-looser: .1em; 
+
+
+$border1: 1px solid $color-tan50;
+
+
+

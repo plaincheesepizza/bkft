@@ -1,0 +1,64 @@
+@mixin clearfix() {
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after { clear: both; }
+}
+
+
+
+
+
+
+@mixin base() {
+	font-family: $fontFamily-sans;
+	font-size: 14px; 	
+	color: $color-textBase;
+}
+@mixin smallCaps() {
+	letter-spacing: .05em;
+	text-transform: uppercase; 
+}
+@mixin fontSection() {
+	@include smallCaps();
+	font-size: 18px;
+}
+@mixin fontColumn($sponsored) {
+	@include smallCaps();
+	font-size: 12px;
+	font-weight: 500; 
+	line-height: 15px;
+	color: $color-grey2;
+	@if $sponsored == 'sponsored' {
+		color: $color-highlight; 
+	}
+}
+@mixin fontHeadline($type) {
+	margin-bottom: 4px; 
+	font-family: $fontFamily-serif; 
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 30px;
+	color: $color-slate;
+	@if ($type == 'featured') {
+		font-size: 36px;
+		line-height: 40px; 
+	}
+	@if ($type == 'sponsored') {
+		font-family: $fontFamily-sans;
+	}
+}
+@mixin fontAuthor() {
+	font-style: italic; 
+	font-size: 12px;
+}
+@mixin fontTimestamp() {
+	font-size: 11px;
+	color: $color-textHighlight;
+}
+
+@mixin fontBlogHeadline() {
+	color: $color-textDark;
+	font-weight: 500;
+}

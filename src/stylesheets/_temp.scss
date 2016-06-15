@@ -1,0 +1,44 @@
+
+	$height: 280px; 
+	$height50: $height/2 - $gutter100; 
+	$height25: $height/4 - $gutter100;
+	$heightsm: 10px;
+	.element--default {
+		background: fade-out(black, .9);
+		border: 1px solid fade-out(black, .9);
+		height: $height; 
+	}
+	.element--ad {
+		border: 0; 
+	}
+	.element__title { text-align: center; }
+	.label { 
+		display: inline-block; 
+		margin-top: $gutter200; 
+		padding: $gutter25 $gutter100;
+		border: 1px solid $color-slate50;
+	}
+	.h50 { height: $height50; }
+	.h25 { height: $height25; }
+	.h05 { height: $heightsm; margin-bottom: $gutter100; }
+
+	.newsItem__text {
+		height: $height; 
+		text-align: center; 
+		border: 1px solid $black10;
+	}
+	.element--ad {
+		background: transparent none;
+		.ad__title { background: fade-out(black, .9); }
+		.ad__body { 
+			.ad__body { display: none; }
+			&.both {
+				background: white; 
+				.ad__body { display: block; }
+			}
+		}
+	}
+	.marketData { 
+		background: white; 
+		border: 1px solid $color-slate25;
+	}
